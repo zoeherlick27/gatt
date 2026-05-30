@@ -1,0 +1,55 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #E8E0D5;
+  --purple: #534AB7;
+  --navy: #1a1a2e;
+  --secondary: #6b6b6b;
+  --card-bg: #EDE7DF;
+  --white: #ffffff;
+  --border: rgba(26, 26, 46, 0.1);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--navy);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea {
+  font-family: var(--font-sans);
+  color: var(--navy);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--secondary);
+}
+
+textarea {
+  resize: none;
+}
