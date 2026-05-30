@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import BottomNav from './components/BottomNav'
+import Header from './components/Header'
 import Home from './pages/Home'
 import Solo from './pages/Solo'
 import Group from './pages/Group'
@@ -21,8 +21,8 @@ export default function App() {
 
   return (
     <>
+      <Header active={tab} onChange={setTab} />
       {renderPage()}
-      <BottomNav active={tab} onChange={setTab} />
     </>
   )
 }

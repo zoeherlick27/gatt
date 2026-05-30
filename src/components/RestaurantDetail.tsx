@@ -1,6 +1,5 @@
 import React from 'react'
 import type { RecommendedRestaurant } from '../lib/claude'
-import Header from './Header'
 
 interface RestaurantDetailProps {
   restaurant: RecommendedRestaurant
@@ -19,17 +18,12 @@ const infoTiles = (r: RecommendedRestaurant) => [
 
 export default function RestaurantDetail({ restaurant, context, onBack }: RestaurantDetailProps) {
   return (
-    <div style={{ paddingBottom: '90px' }}>
+    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '40px 40px 60px' }}>
       <div style={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '18px 20px 16px',
-        borderBottom: '1px solid rgba(26,26,46,0.1)',
-        backgroundColor: 'var(--bg)',
-        position: 'sticky',
-        top: 0,
-        zIndex: 10,
+        gap: '16px',
+        marginBottom: '40px',
       }}>
         <button onClick={onBack} style={{
           display: 'flex',
@@ -63,7 +57,7 @@ export default function RestaurantDetail({ restaurant, context, onBack }: Restau
         </span>
       </div>
 
-      <div style={{ padding: '24px 20px 0' }}>
+      <div>
         <p style={{
           fontSize: '11px',
           fontWeight: 600,
@@ -77,7 +71,7 @@ export default function RestaurantDetail({ restaurant, context, onBack }: Restau
 
         <h1 style={{
           fontFamily: 'var(--font-serif)',
-          fontSize: '36px',
+          fontSize: '48px',
           fontWeight: 600,
           color: 'var(--navy)',
           lineHeight: 1.15,
